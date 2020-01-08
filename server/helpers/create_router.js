@@ -28,7 +28,7 @@ const createRouter = function (collection) {
 
   router.post('/', (req, res) => {
     collection.insertOne(req.body)
-    .then(docs => res.json(docs.op[0]))
+    .then(docs => res.json(docs.ops[0]))
     .catch((error) => {
       console.error(error)
       res.status(500)
