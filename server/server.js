@@ -15,7 +15,7 @@ MongoClient.connect('mongodb://localhost:27017', (err, client) => {
 
   const db = client.db('bookings_app');
   const bookingsCollection = db.collection('bookings');
-  const bookingRouter = createRouter(bookingsCollection)
+  const bookingsRouter = createRouter(bookingsCollection)
   app.use('/api/bookings', bookingsRouter);
 
   app.listen(3000, function(){
