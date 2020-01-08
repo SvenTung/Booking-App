@@ -1,4 +1,5 @@
 use bookings_app;
+
 db.dropDatabase();
 
 db.bookings.insertMany([

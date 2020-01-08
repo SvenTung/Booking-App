@@ -1,4 +1,4 @@
-<template lang="html">
+<template lang="html">
   <label for="name">Customer Name</label>
   <input type="text" id="name" v-model="name" required />
 
@@ -6,12 +6,12 @@
   <input type="email" v-model="email" required />
 
   <label for="checkedId">Is the Customer checked in?</label>
+  <input type="checkbox" id="checkedId" v-model="checkedIn" />
 </template>
 
 <script>
 export default {
   name: "bookingForm",
-
   data() {
     return {
       name: "",
@@ -22,5 +22,4 @@ export default {
 };
 </script>
 
-<style lang="css" scoped>
-</style>
+<style lang="css" scoped></style>
