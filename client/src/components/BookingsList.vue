@@ -11,7 +11,7 @@
 <script>
 import { eventBus } from "@/main.js";
 import BookingsService from "@/services/BookingService.js";
-import BookingsListItem from "./BookingsListItem.js";
+import BookingsListItem from "./BookingsListItem.vue";
 export default {
   data() {
     return {
