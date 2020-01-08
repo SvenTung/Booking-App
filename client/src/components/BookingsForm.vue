@@ -8,6 +8,8 @@
 
     <label for="checkedId">Is the Customer checked in?</label>
     <input type="checkbox" id="checkedId" v-model="checkedIn" />
+
+    <input type="submit" value="save" id="save" />
   </div>
 </template>
 
