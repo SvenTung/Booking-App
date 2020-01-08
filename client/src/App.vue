@@ -24,6 +24,11 @@ export default {
 </script>
 
 <style lang="css" scoped>
+
+#app {
+  width: 700px;
+  margin: auto 0;
+}
 .main {
   margin: 20px;
 }
