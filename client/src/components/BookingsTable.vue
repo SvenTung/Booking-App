@@ -1,10 +1,14 @@
 <template lang="html">
   <div class="bookings-wrapper">
-    <bookings-list-item
-      v-for="(booking, index) in bookings"
-      :key="index"
-      :booking="booking"
-    />
+    <table>
+      <tr>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Checked in</th>
+      </tr>
+      <bookings-list-item v-for="(booking, index) in bookings" :key="index" :booking="booking"/>
+    </table>
+
   </div>
 </template>
 
@@ -20,7 +24,7 @@ export default {
   },
   mounted() {
     BookingsService.getBookings().then(
-      bookings => (this.bookings = BookingsListItem)
+      bookings => (this.bookings = bookings)
     );
     eventBus.$on("booking-added", booking => {
       this.bookings.push(booking);
@@ -41,4 +45,5 @@ export default {
   display: flex;
   flex-wrap: wrap;
 }
+
 </style>
