@@ -6,7 +6,7 @@
   <input type="email" v-model="email" required />
 
   <label for="checkedId">Is the Customer checked in?</label>
-  <input type="checkbox" value="true" v-model="checkedIn" />
+  <input type="checkbox" id="checkedId" v-model="checkedIn" />
 </template>
 
 <script>
