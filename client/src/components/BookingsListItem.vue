@@ -23,13 +23,12 @@ export default {
       BookingService.deleteBooking(this.booking._id).then(() =>
         eventBus.$emit("booking-deleted", this.booking._id)
       );
+    },
+    updateBooking() {
+      BookingService.updateBooking(this.booking).then(() =>
+        eventBus.$emit("booking-updated", this.booking)
+      );
     }
-  },
-
-  updateBooking() {
-    BookingService.updateBooking(this.booking).then(() =>
-      eventBus.$emit("booking-updated", this.booking)
-    );
   }
 };
 </script>
