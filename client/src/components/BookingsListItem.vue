@@ -26,7 +26,18 @@ export default {
 </script>
 
 <style lang="css" scoped>
+
 td {
-  padding: 0 20px;
+  padding: 3px 20px 10px;
+  font-family:arial, san-serif;
 }
+
+
+.delete-btn {
+  background-color:#00EAFF;
+  border:none;
+  color: black;
+  padding:5px;
+}
+
 </style>
