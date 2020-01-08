@@ -15,5 +15,8 @@ export default {
     return fetch(baseURL + id, {
       method: "DELETE"
     });
+  },
+  updateBooking(id) {
+    return fetch(baseURL).then(res => res.json());
   }
 };

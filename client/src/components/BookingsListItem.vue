@@ -1,8 +1,8 @@
 <template lang="html">
   <div class="booking-item">
-    <h3>Customer Name: {{ booking.name }}</h3>
-    <p>Customer Email: {{ booking.email }}</p>
-    <p>Checked In: {{ booking.checkedIn }}</p>
+    <h3>{{ booking.name }}</h3>
+    <p>{{ booking.email }}</p>
+    <p>{{ booking.checkedIn }}</p>
     <button
       type="button"
       class="delete-btn"
