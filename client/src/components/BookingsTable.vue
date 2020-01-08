@@ -50,4 +50,12 @@ export default {
   display: flex;
   flex-wrap: wrap;
 }
+
+th{
+  color: #00EAFF;
+  text-align: left;
+  padding: 0 20px;
+  margin-bottom: 20px;
+  font-family: Arial, sans-serif;
+}
 </style>

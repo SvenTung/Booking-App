@@ -2,7 +2,7 @@
 
   <div id="form">
     <h2>Add Customer Details</h2>
-    <form class="" v-on:submit="addBooking" method="post">
+    <form class="" v-on:submit="addBooking" method="post" id="form-area">
       <label for="name">Name</label>
       <input type="text" id="name" v-model="name" required />
 
@@ -50,7 +50,7 @@ export default {
 
 h2 {
   font-size: 18px;
-   margin: 0 0 15px 0;
+  margin: 0 0 15px 0;
   font-family:Arial,san-serif;
   color: #00EAFF;
 }
@@ -60,6 +60,13 @@ h2 {
   padding: 10px;
   border: 2px solid #00EAFF;
   border-radius:3px;
+
 }
+
+label{
+  margin-left: 4px;
+  margin-right: 10px;
+}
+
 
 </style>
