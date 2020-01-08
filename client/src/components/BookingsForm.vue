@@ -1,6 +1,6 @@
 <template lang="html">
   <div id="form">
-    <form class=" v-on" submit="addBooking" method="post">
+    <form class="" v-on:submit="addBooking" method="post">
       <label for="name">Customer Name</label>
       <input type="text" id="name" v-model="name" required />
 
@@ -37,9 +37,12 @@ export default {
         email: this.email,
         checkedIn: this.checkedIn
       };
-      BookingsService.postBooking(Booking).then(res =>
+      BookingsService.postBooking(booking).then(res =>
         eventBus.$emit("booking-added", res)
       );
+      {this.name = "",
+      this.email = "",
+      this.checkedIn = false}
     }
   }
 };
