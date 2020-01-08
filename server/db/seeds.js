@@ -1,7 +1,8 @@
-use bookings;
+use bookings_app;
+
 db.dropDatabase();
 
-db.customers.insertMany([
+db.bookings.insertMany([
     {
         Name: "Mark",
         Email: "mark@mail.com",
