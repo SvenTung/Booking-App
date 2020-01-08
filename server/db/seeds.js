@@ -1,7 +1,7 @@
-use customers;
+use bookings;
 db.dropDatabase();
 
-db.bookings.insertMany([
+db.customers.insertMany([
     {
         Name: "Mark",
         Email: "mark@mail.com",
@@ -9,6 +9,7 @@ db.bookings.insertMany([
     },
 
     {
+        
         Name: "Debbie",
         Email: "Debbie@email.co.uk",
         CheckedIn: true
@@ -31,4 +32,4 @@ db.bookings.insertMany([
         Email: "kyle@mail.co.uk",
         CheckedIn: false
     },
-])
+]);
