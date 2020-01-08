@@ -1,14 +1,14 @@
 <template lang="html">
-  <div class="booking-item">
-    <h3>{{ booking.name }}</h3>
-    <p>{{ booking.email }}</p>
-    <p>{{ booking.checkedIn }}</p>
+  <tr class="booking-item">
+    <td>{{ booking.name }}</td>
+    <td>{{ booking.email }}</td>
+    <td>{{ booking.checkedIn }}</td>
     <button
       type="button"
       class="delete-btn"
       v-on:click="deleteBooking"
     ></button>
-  </div>
+  </tr>
 </template>
 
 <script>

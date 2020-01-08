@@ -36,11 +36,7 @@ export default {
     });
     eventBus.$on("booking-updated", id => {
       let index = this.bookings.findIndex(booking => booking._id === id);
-<<<<<<< HEAD
       this.bookings[index].checkedIn = !this.bookings[index].checkedIn;
-=======
-      this.bookings[index].checkedIn = !this.bookings[index].checkedIn
->>>>>>> da86c2f475ebd218046205452f301fc68c3f59e9
     });
   },
   components: {
