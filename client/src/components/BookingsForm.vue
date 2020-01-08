@@ -16,6 +16,9 @@
 </template>
 
 <script>
+import { eventBus } from "@/main.js";
+import BookingsService from "@/services/BookingService.js";
+
 export default {
   name: "bookingForm",
   data() {
@@ -24,6 +27,20 @@ export default {
       email: "",
       checkedIn: false
     };
+  },
+
+  methods: {
+    addBooking(e) {
+      e.preventDefault();
+      const booking = {
+        name: this.name,
+        email: this.email,
+        checkedIn: this.checkedIn
+      };
+      BookingsService.postBooking(Booking).then(res =>
+        eventBus.$emit("booking-added", res)
+      );
+    }
   }
 };
 </script>
