@@ -2,12 +2,9 @@
   <tr class="booking-item">
     <td>{{ booking.name }}</td>
     <td>{{ booking.email }}</td>
-    <td>{{ booking.checkedIn }}</td>
+    <td v-on:click="updateBooking">{{ booking.checkedIn }}</td>
     <button type="button" class="delete-btn" v-on:click="deleteBooking">
       Delete
-    </button>
-    <button class="delete-btn" v-on:click="updateBooking">
-      update check in
     </button>
   </tr>
 </template>
@@ -25,6 +22,7 @@ export default {
       );
     },
     updateBooking() {
+      this.booking.checkedIn = !this.booking.checkedIn
       BookingService.updateBooking(this.booking).then(() =>
         eventBus.$emit("booking-updated", this.booking)
       );
@@ -35,14 +33,14 @@ export default {
 
 <style lang="css" scoped>
 td {
-  padding: 3px 20px 10px;
+  padding: 3px 20px 3px;
   font-family: arial, san-serif;
 }
 
 .delete-btn {
-  background-color: #00eaff;
+  background-color: #ED526f;
   border: none;
-  color: black;
+  color: white;
   padding: 5px;
   margin: 5px;
 }

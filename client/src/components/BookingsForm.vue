@@ -12,7 +12,7 @@
       <label for="checkedId">Checked in?</label>
       <input type="checkbox" id="checkedId" v-model="checkedIn" />
 
-      <input type="submit" value="save" id="save" />
+      <input type="submit" value="Save" id="save" />
     </form>
   </div>
 </template>
@@ -66,6 +66,12 @@ h2 {
 label{
   margin-left: 4px;
   margin-right: 10px;
+}
+
+input[type = submit]{
+  background-color: #00EAFF;
+  border: 0px;
+  padding: 5px;
 }
 
 

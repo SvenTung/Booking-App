@@ -26,7 +26,7 @@ export default {
 <style lang="css" scoped>
 
 #app {
-  width: 700px;
+  width: 600px;
   margin: 0 auto;
 }
 .main {

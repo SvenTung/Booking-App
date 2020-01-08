@@ -57,5 +57,6 @@ th{
   padding: 0 20px;
   margin-bottom: 20px;
   font-family: Arial, sans-serif;
+
 }
 </style>
