@@ -1,5 +1,6 @@
 <template lang="html">
   <div id="form">
+      <form class=" v-on"submit="addBooking" method="post"
     <label for="name">Customer Name</label>
     <input type="text" id="name" v-model="name" required />
 
@@ -10,6 +11,7 @@
     <input type="checkbox" id="checkedId" v-model="checkedIn" />
 
     <input type="submit" value="save" id="save" />
+    </form>
   </div>
 </template>
 
