@@ -4,33 +4,33 @@ db.dropDatabase();
 
 db.bookings.insertMany([
     {
-        Name: "Mark",
-        Email: "mark@mail.com",
-        CheckedIn: true
+        name: "Mark",
+        email: "mark@mail.com",
+        checkedIn: true
     },
 
     {
         
-        Name: "Debbie",
-        Email: "Debbie@email.co.uk",
-        CheckedIn: true
+        name: "Debbie",
+        email: "Debbie@email.co.uk",
+        checkedIn: true
     },
 
     {
-        Name: "Sven",
-        Email: "sven@mailbox.co.uk",
-        CheckedIn: false
+        name: "Sven",
+        email: "sven@mailbox.co.uk",
+        checkedIn: false
     },
 
     {
-        Name: "Brad",
-        Email: "brad@email.com",
-        CheckedIn: true
+        name: "Brad",
+        email: "brad@email.com",
+        checkedIn: true
     },
 
     {
-        Name: "Kyle",
-        Email: "kyle@mail.co.uk",
-        CheckedIn: false
+        name: "Kyle",
+        email: "kyle@mail.co.uk",
+        checkedIn: false
     },
 ]);
