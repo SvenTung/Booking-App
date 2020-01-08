@@ -3,11 +3,9 @@
     <td>{{ booking.name }}</td>
     <td>{{ booking.email }}</td>
     <td>{{ booking.checkedIn }}</td>
-    <button
-      type="button"
-      class="delete-btn"
-      v-on:click="deleteBooking"
-    ></button>
+    <button type="button" class="delete-btn" v-on:click="deleteBooking">
+      Delete
+    </button>
   </tr>
 </template>
 
@@ -27,4 +25,8 @@ export default {
 };
 </script>
 
-<style lang="css" scoped></style>
+<style lang="css" scoped>
+td {
+  padding: 0 20px;
+}
+</style>
