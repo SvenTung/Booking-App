@@ -33,6 +33,10 @@ export default {
       let index = this.bookings.findIndex(booking => booking._id === id);
       this.bookings.splice(index, 1);
     });
+    eventBus.$on("booking-updated", id => {
+      let index = this.bookings.findIndex(booking => booking._id === id);
+      this.bookings[index].checkedIn = !this.bookings[index].checkedIn
+    })
   },
   components: {
     "bookings-list-item": BookingsListItem
