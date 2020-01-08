@@ -1,31 +1,44 @@
 <template lang="html">
-  <div class="booking-item">
-    <h3>Customer Name: {{ booking.name }}</h3>
-    <p>Customer Email: {{ booking.email }}</p>
-    <p>Checked In: {{ booking.checkedIn }}</p>
-    <button
-      type="button"
-      class="delete-btn"
-      v-on:click="deleteBooking"
-    ></button>
+  <div class="bookings-wrapper">
+    <bookings-list-item
+      v-for="(booking, index) in bookings"
+      :key="index"
+      :booking="booking"
+    />
   </div>
 </template>
 
 <script>
 import { eventBus } from "@/main.js";
-import BookingService from "@/services/BookingService.js";
-
+import BookingsService from "@/services/BookingService.js";
+import BookingsListItem from "./BookingsListItem.js";
 export default {
-  name: "booking-list-item",
-  props: ["booking"],
-  methods: {
-    deleteBooking() {
-      BookingService.deleteBooking(this.booking._id).then(() =>
-        eventBus.$emit("booking-deleted", this.booking._id)
-      );
-    }
+  data() {
+    return {
+      bookings: []
+    };
+  },
+  mounted() {
+    BookingsService.getBookings().then(
+      bookings => (this.bookings = BookingsListItem)
+    );
+    eventBus.$on("booking-added", booking => {
+      this.bookings.push(booking);
+    });
+    eventBus.$on("booking-deleted", id => {
+      let index = this.bookings.findIndex(booking => booking._id === id);
+      this.bookings.splice(index, 1);
+    });
+  },
+  components: {
+    "bookings-list-item": BookingsListItem
   }
 };
 </script>
 
-<style lang="css" scoped></style>
+<style lang="css" scoped>
+.bookings-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+}
+</style>
