@@ -1,16 +1,16 @@
 <template lang="html">
   <div id="form">
-      <form class=" v-on"submit="addBooking" method="post"
-    <label for="name">Customer Name</label>
-    <input type="text" id="name" v-model="name" required />
+    <form class=" v-on" submit="addBooking" method="post">
+      <label for="name">Customer Name</label>
+      <input type="text" id="name" v-model="name" required />
 
-    <label for="email">Customer Email</label>
-    <input type="email" v-model="email" required />
+      <label for="email">Customer Email</label>
+      <input type="email" v-model="email" required />
 
-    <label for="checkedId">Is the Customer checked in?</label>
-    <input type="checkbox" id="checkedId" v-model="checkedIn" />
+      <label for="checkedId">Is the Customer checked in?</label>
+      <input type="checkbox" id="checkedId" v-model="checkedIn" />
 
-    <input type="submit" value="save" id="save" />
+      <input type="submit" value="save" id="save" />
     </form>
   </div>
 </template>
