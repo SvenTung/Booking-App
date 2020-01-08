@@ -6,9 +6,12 @@
         <th>Email</th>
         <th>Checked in</th>
       </tr>
-      <bookings-list-item v-for="(booking, index) in bookings" :key="index" :booking="booking"/>
+      <bookings-list-item
+        v-for="(booking, index) in bookings"
+        :key="index"
+        :booking="booking"
+      />
     </table>
-
   </div>
 </template>
 
@@ -23,9 +26,7 @@ export default {
     };
   },
   mounted() {
-    BookingsService.getBookings().then(
-      bookings => (this.bookings = bookings)
-    );
+    BookingsService.getBookings().then(bookings => (this.bookings = bookings));
     eventBus.$on("booking-added", booking => {
       this.bookings.push(booking);
     });
@@ -35,7 +36,7 @@ export default {
     });
     eventBus.$on("booking-updated", id => {
       let index = this.bookings.findIndex(booking => booking._id === id);
-      this.bookings[index].checkedIn = !this.bookings[index].checkedIn
+      this.bookings[index].checkedIn = !this.bookings[index].checkedIn;
     });
   },
   components: {
@@ -49,5 +50,4 @@ export default {
   display: flex;
   flex-wrap: wrap;
 }
-
 </style>

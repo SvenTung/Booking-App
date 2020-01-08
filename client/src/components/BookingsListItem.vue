@@ -1,20 +1,19 @@
 <template lang="html">
-  <div class="booking-item">
-    <h3>Customer Name: {{ booking.name }}</h3>
-    <p>Customer Email: {{ booking.email }}</p>
-    <p>Checked In: {{ booking.checkedIn }}</p>
+  <tr class="booking-item">
+    <td>{{ booking.name }}</td>
+    <td>{{ booking.email }}</td>
+    <td>{{ booking.checkedIn }}</td>
     <button
       type="button"
       class="delete-btn"
       v-on:click="deleteBooking"
     ></button>
-  </div>
+  </tr>
 </template>
 
 <script>
 import { eventBus } from "@/main.js";
 import BookingService from "@/services/BookingService.js";
-
 export default {
   name: "booking-list-item",
   props: ["booking"],

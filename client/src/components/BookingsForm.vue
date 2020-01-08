@@ -20,7 +20,6 @@
 <script>
 import { eventBus } from "@/main.js";
 import BookingsService from "@/services/BookingService.js";
-
 export default {
   name: "bookingForm",
   data() {
@@ -30,7 +29,6 @@ export default {
       checkedIn: false
     };
   },
-
   methods: {
     addBooking(e) {
       e.preventDefault();
@@ -42,9 +40,7 @@ export default {
       BookingsService.postBooking(booking).then(res =>
         eventBus.$emit("booking-added", res)
       );
-      this.name = "",
-      this.email = "",
-      this.checkedIn = false
+      (this.name = ""), (this.email = ""), (this.checkedIn = false);
     }
   }
 };
