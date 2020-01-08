@@ -16,7 +16,12 @@ export default {
       method: "DELETE"
     });
   },
-  updateBooking(id) {
-    return fetch(baseURL).then(res => res.json());
+  updateBooking(payload) {
+    id = payload._id;
+    return fetch(baseURL + id, {
+      method: "UPDATE",
+      body: JSON.stringify(payload),
+      headers: { "Content-Type": "application/json" }
+    }).then(res => res.json());
   }
 };

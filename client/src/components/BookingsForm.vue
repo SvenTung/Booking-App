@@ -38,9 +38,7 @@ export default {
       BookingsService.postBooking(booking).then(res =>
         eventBus.$emit("booking-added", res)
       );
-      {
-        (this.name = ""), (this.email = ""), (this.checkedIn = false);
-      }
+      (this.name = ""), (this.email = ""), (this.checkedIn = false);
     }
   }
 };

@@ -1,14 +1,19 @@
 <template lang="html">
   <div id="app">
-    <bookings-form />
-    <bookings-table />
+    <div class="main">
+      <div id="logo">
+        <img src="@/assets/hotel_app_logo.png" />
+      </div>
+      <bookings-form />
+      <bookings-table />
+    </div>
   </div>
 </template>
 
 <script>
-<<<<<<< HEAD
 import BookingsForm from "./components/BookingsForm.vue";
 import BookingsTable from "./components/BookingsTable.vue";
+
 export default {
   name: "app",
   components: {
@@ -18,20 +23,12 @@ export default {
 };
 </script>
 
-<style lang="css" scoped></style>
-=======
-import BookingsForm from './components/BookingsForm.vue'
-import BookingsTable from './components/BookingsTable.vue'
-
-export default {
-  name: 'app',
-  components: {
-    'bookings-form': BookingsForm,
-    'bookings-table': BookingsTable,
-  },
-}
-</script>
-
 <style lang="css" scoped>
+.main {
+  margin: 20px;
+}
+
+#logo {
+  margin: 20px 0 20px 0px;
+}
 </style>
->>>>>>> 308f291693c3a870adf87301134f286e1011049f
