@@ -17,7 +17,7 @@ export default {
     });
   },
   updateBooking(payload) {
-    id = payload._id;
+    id = (payload._id);
     return fetch(baseURL + id, {
       method: "UPDATE",
       body: JSON.stringify(payload),
