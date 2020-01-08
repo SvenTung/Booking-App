@@ -27,7 +27,7 @@ export default {
 
 #app {
   width: 700px;
-  margin: auto 0;
+  margin: 0 auto;
 }
 .main {
   margin: 20px;
