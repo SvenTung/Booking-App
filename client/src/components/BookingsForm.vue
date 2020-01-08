@@ -1,13 +1,15 @@
 <template lang="html">
+
   <div id="form">
+    <h2>Add Customer Details</h2>
     <form class="" v-on:submit="addBooking" method="post">
-      <label for="name">Customer Name</label>
+      <label for="name">Name</label>
       <input type="text" id="name" v-model="name" required />
 
-      <label for="email">Customer Email</label>
+      <label for="email">Email</label>
       <input type="email" v-model="email" required />
 
-      <label for="checkedId">Is the Customer checked in?</label>
+      <label for="checkedId">Checked in?</label>
       <input type="checkbox" id="checkedId" v-model="checkedIn" />
 
       <input type="submit" value="save" id="save" />
@@ -48,4 +50,20 @@ export default {
 };
 </script>
 
-<style lang="css" scoped></style>
+<style lang="css" scoped>
+
+h2 {
+  font-size: 18px;
+   margin: 0 0 15px 0;
+  font-family:Arial,san-serif;
+  color: #00EAFF;
+}
+
+#form {
+  margin: 10px;
+  padding: 10px;
+  border: 2px solid #00EAFF;
+  border-radius:3px;
+}
+
+</style>
